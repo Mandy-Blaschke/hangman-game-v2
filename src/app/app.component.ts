@@ -10,21 +10,25 @@ export class AppComponent implements OnInit {
   alphabet: string [] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
     'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   words = WORDS;
-  currentWord = this.words[0];
+  currentWord: string;
   lettersOfCurrentWord: Letter[] = [];
   guessedLetters: string[] = [];
-  foundedLetters: string[] = [];
   faults = 0;
+  gameFinished = false;
 
   ngOnInit(): void {
-    this.getLettersFromCurrentWord();
+    this.startGame();
+  }
+
+  startGame(): void {
+    this.resetGame();
   }
 
   getLettersFromCurrentWord(): void {
     const chars = this.currentWord.split('');
     chars.forEach((l) => this.lettersOfCurrentWord.push(
       {
-        char: l.toLowerCase(),
+        char: l.toUpperCase(),
         isVisible: false
       }
     ));
@@ -39,14 +43,24 @@ export class AppComponent implements OnInit {
       this.faults++;
     } else {
       founds.forEach((l) => l.isVisible = true);
-      this.foundedLetters.push(letter);
-      console.log(this.foundedLetters);
     }
     this.checkWin();
   }
 
   checkWin(): void {
+    const allRevealed = this.lettersOfCurrentWord.filter((l) => !l.isVisible).length === 0;
+    if (allRevealed) {
+      this.gameFinished = true;
+    }
+  }
 
+  resetGame(): void {
+    this.currentWord = this.words[Math.floor(Math.random() * this.words.length)];
+    this.getLettersFromCurrentWord();
+    this.faults = 0;
+    this.guessedLetters = [];
+    this.gameFinished = false;
+    this.lettersOfCurrentWord.forEach((l) => l.isVisible = false);
   }
 
 }
@@ -55,7 +69,6 @@ export interface Letter {
   char: string;
   isVisible: boolean;
 }
-
 
 export const WORDS: string[] = [
   'Test', 'Eule', 'Staubsauger', 'Hangman', 'Eheleute', 'Kuckucksuhr', 'Flasche', 'Uhr', 'Mitternacht',
@@ -112,5 +125,7 @@ export const WORDS: string[] = [
   'maschine', 'weste', 'roman', 'osten', 'norden', 'westen', 'pullover', 'klemmbrett', 'stiehl', 'handy', 'haushalt',
   'kette', 'freundin', 'enkel', 'enkelin', 'sohn', 'tochter', 'test', 'bitte', 'betrachten', 'informationen', 'wetter', 'heiss',
   'hundert', 'kueche', 'aufregung', 'euphorie', 'fragen', 'wissen', 'ernaehrung', 'vergangenheit', 'politik', 'superman',
-  'batman', 'afrika', 'feldzug',
+  'batman', 'afrika', 'feldzug', 'diesel', 'mode', 'geld', 'modenschau', 'experiment', 'gold', 'loch', 'dollar', 'versprechen',
+  'gehirn', 'widerspruch', 'mechanik', 'millionen', 'cents', 'euro', 'europa', 'asien', 'australien', 'steigerung', 'jahre',
+  'jahreszeit', 'fruehling', 'summe',
 ];

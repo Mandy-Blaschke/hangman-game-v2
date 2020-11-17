@@ -37,3 +37,9 @@
 
 </div>
 
+
+<div class="winner"  *ngIf="gameFinished">
+  <h2>Du hast gewonnen, das Wort war: {{currentWord.toUpperCase()}}</h2>
+<button (click)="startGame()">Neues Spiel?</button>
+</div>
+
