@@ -1,20 +1,23 @@
-.word, .alphabet, .tries {
-  display: flex;
-  flex-wrap: wrap;
+.game {
 
-  .letter-box {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    margin: 5px;
+  .word, .alphabet, .tries {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-  }
-}
+    flex-wrap: wrap;
 
-.disabled {
-  background-color: yellow;
-  pointer-events: none;
+    .letter-box {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+  }
+
+  .disabled {
+    background-color: yellow;
+    pointer-events: none;
+  }
 }

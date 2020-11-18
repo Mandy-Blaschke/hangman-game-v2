@@ -2,9 +2,7 @@
 
 <div class="game">
 
-  <div class="hanging-man" style="margin: 15px">
-    <img src="#" alt="test">
-  </div>
+  <app-hanging-man [faults]="faults"></app-hanging-man>
 
   <h2>Gesuchtes Wort</h2>
   <div class="word">
@@ -21,7 +19,7 @@
   <div class="alphabet">
     <div *ngFor="let alphabetLetter of alphabet"
          (click)="guessLetter(alphabetLetter)"
-         [class.disabled]="guessedLetters.includes(alphabetLetter)"
+         [class.disabled]="guessedLetters.includes(alphabetLetter) || gameFinished"
     >
       <div class="letter-box">{{alphabetLetter.toUpperCase()}}</div>
     </div>
@@ -39,8 +37,8 @@
 </div>
 
 
-<div class="winner"  *ngIf="gameFinished">
+<div class="winner" *ngIf="gameFinished">
   <h2>Du hast gewonnen, das Wort war: {{currentWord.toUpperCase()}}</h2>
-<button (click)="startGame()">Neues Spiel?</button>
+  <button (click)="startGame()">Neues Spiel?</button>
 </div>
 

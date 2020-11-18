@@ -1,0 +1,391 @@
+.hanging-man {
+  position: relative;
+  margin: 15px;
+  width: 800px;
+  height: 500px;
+  border: 1px solid black;
+  background-image: url("~src/assets/noidy-background.png");
+
+  .one {
+    position: absolute;
+    bottom: 16px;
+    left: 20%;
+    width: 300px;
+    height: 35px;
+    background-image: repeating-linear-gradient(0deg, #642815 50%, #752b0f);
+    box-shadow: 4px 1px 6px #211f1f;
+    z-index: 3;
+    animation: ani-one ease-out 1s;
+
+    @keyframes ani-one {
+      0% {
+        left: 0;
+      }
+      50% {
+        left: 10%;
+      }
+      100% {
+        left: 20%;
+      }
+    }
+  }
+
+  .two {
+    position: absolute;
+    bottom: 51px;
+    left: 30%;
+    width: 35px;
+    height: 350px;
+    background-image: repeating-linear-gradient(90deg, #642815 50%, #752b0f);
+    box-shadow: 4px -2px 6px #211f1f;
+    z-index: 3;
+    animation: ani-two ease-out 1s;
+
+    @keyframes ani-two {
+      0% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 25px;
+      }
+      100% {
+        bottom: 51px;
+      }
+    }
+  }
+
+  .three {
+    position: absolute;
+    bottom: 37px;
+    left: 26%;
+    width: 20px;
+    height: 150px;
+    transform: rotate(24deg);
+    background-image: repeating-linear-gradient(90deg, #642815 50%, #752b0f);
+    box-shadow: 4px -2px 6px #211f1f;
+    z-index: 1;
+    animation: ani-three linear 1s;
+
+    @keyframes ani-three {
+      0% {
+        left: 0;
+        transform: rotate(0deg);
+      }
+      50% {
+        left: 13%;
+        transform: rotate(12deg);
+      }
+      100% {
+        left: 26%;
+        transform: rotate(24deg);
+      }
+    }
+  }
+
+  .four {
+    position: absolute;
+    bottom: 37px;
+    left: 36%;
+    width: 20px;
+    height: 150px;
+    transform: rotate(156deg);
+    background-image: repeating-linear-gradient(90deg, #642815 50%, #752b0f);
+    box-shadow: -2px 2px 6px #211f1f;
+    z-index: 1;
+    animation: ani-four linear 1s;
+
+    @keyframes ani-four {
+      0% {
+        left: 0;
+        transform: rotate(0deg);
+      }
+      25% {
+        left: 9%;
+        transform: rotate(74deg);
+      }
+      50% {
+        left: 18%;
+        transform: rotate(128deg);
+      }
+      100% {
+        left: 36%;
+        transform: rotate(156deg);
+      }
+    }
+  }
+
+  .five {
+    position: absolute;
+    top: 100px;
+    left: 26%;
+    width: 290px;
+    height: 35px;
+    background-image: repeating-linear-gradient(0deg, #642815 50%, #752b0f);
+    box-shadow: 4px 1px 6px #211f1f;
+    z-index: 2;
+    animation: ani-five ease-out 1s;
+
+    @keyframes ani-five {
+      0% {
+        top: 0;
+      }
+      50% {
+        top: 50px;
+      }
+      100% {
+        top: 100px;
+      }
+    }
+  }
+
+  .six {
+    position: absolute;
+    right: 40%;
+    top: 96px;
+    width: 10px;
+    height: 95px;
+    background-image: radial-gradient(#795f08, #5b490c);
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #211f1f;
+    z-index: 4;
+    animation: ani-six ease-out 1s;
+
+    @keyframes ani-six {
+      0% {
+        top: 0;
+        transform: rotate(30deg);
+      }
+      50% {
+        top: 47px;
+        transform: rotate(15deg);
+      }
+      100% {
+        top: 96px;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .man {
+
+    .seven-head {
+      position: absolute;
+      right: 38%;
+      top: 37%;
+      height: 45px;
+      width: 40px;
+      border-radius: 100%;
+      background-image: radial-gradient(#d2caba, #bc9d9d);
+      box-shadow: 4px 1px 6px #211f1f;
+      z-index: 4;
+      animation: ani-head ease 1s;
+
+      @keyframes ani-head {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .eight-body {
+      position: absolute;
+      right: 36.5%;
+      bottom: 38%;
+      height: 80px;
+      width: 60px;
+      background-image: linear-gradient(120deg, #d2d210, #dd930a);
+      box-shadow: 1px 1px 4px #211f1f;
+      border-radius: 21px 21px 0 0;
+      z-index: 3;
+      animation: ani-body ease-out 1s;
+
+      @keyframes ani-body {
+        0% {
+          opacity: 0;
+          transform: rotate(120deg);
+        }
+        25% {
+          opacity: 0.25;
+          transform: rotate(60deg);
+        }
+        50% {
+          opacity: 0.5;
+          transform: rotate(30deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .nine-arm-left {
+      position: absolute;
+      right: 44%;
+      bottom: 38%;
+      height: 80px;
+      width: 20px;
+      background-image: linear-gradient(120deg, #d2d210, #dd930a);
+      box-shadow: 4px 1px 6px #211f1f;
+      border-radius: 0 0 21px 21px;
+      transform: rotate(45deg);
+      z-index: 1;
+      animation: ani-arm-left linear 1s;
+
+      @keyframes ani-arm-left {
+        0% {
+          opacity: 0;
+          transform: rotate(-120deg);
+        }
+        25% {
+          opacity: 0.25;
+          transform: rotate(-60deg);
+        }
+        50% {
+          opacity: 0.5;
+          transform: rotate(-30deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .ten-arm-right {
+      position: absolute;
+      right: 34%;
+      bottom: 38%;
+      height: 80px;
+      width: 20px;
+      background-image: linear-gradient(120deg, #d2d210, #dd930a);
+      box-shadow: 4px 1px 6px #211f1f;
+      border-radius: 0 0 21px 21px;
+      transform: rotate(-45deg);
+      z-index: 1;
+
+      animation: ani-arm-right linear 1s;
+
+      @keyframes ani-arm-right {
+        0% {
+          opacity: 0;
+          transform: rotate(120deg);
+        }
+        25% {
+          opacity: 0.25;
+          transform: rotate(60deg);
+        }
+        50% {
+          opacity: 0.5;
+          transform: rotate(30deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .eleven-leg-right {
+      position: absolute;
+      right: 35%;
+      bottom: 22%;
+      height: 90px;
+      width: 25px;
+      background-image: linear-gradient(120deg, #1051d2, #0e2991);
+      box-shadow: 4px 1px 6px #211f1f;
+      transform: rotate(-22deg);
+      z-index: 1;
+      animation: ani-leg-right ease-out 1s;
+
+      @keyframes ani-leg-right {
+        0% {
+          opacity: 0;
+          transform: rotate(-360deg);
+          right: 0;
+          bottom: 0;
+        }
+        25% {
+          opacity: 0.25;
+          transform: rotate(-130deg);
+          right: 5%;
+          bottom: 6%;
+        }
+        50% {
+          opacity: 0.5;
+          transform: rotate(-65deg);
+          right: 15%;
+          bottom: 8%;
+        }
+        75% {
+          opacity: 0.5;
+          transform: rotate(-32deg);
+          right: 25%;
+          bottom: 12%;
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(-22deg);
+          right: 35%;
+          bottom: 22%;
+        }
+      }
+    }
+
+    .twelve-leg-left {
+      position: absolute;
+      right: 42%;
+      bottom: 22%;
+      height: 90px;
+      width: 25px;
+      background-image: linear-gradient(120deg, #1051d2, #0e2991);
+      box-shadow: 4px 1px 6px #211f1f;
+      transform: rotate(16deg);
+      z-index: 1;
+      animation: ani-leg-right ease-out 1s;
+
+      @keyframes ani-leg-right {
+        0% {
+          opacity: 0;
+          transform: rotate(-150deg);
+          right: 0;
+          bottom: 0;
+        }
+        25% {
+          opacity: 0.25;
+          transform: rotate(-100deg);
+          right: 15%;
+          bottom: 4%;
+        }
+        50% {
+          opacity: 0.5;
+          transform: rotate(-50deg);
+          right: 25%;
+          bottom: 8%;
+        }
+        75% {
+          opacity: 0.5;
+          transform: rotate(-0deg);
+          right: 30%;
+          bottom: 10%;
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(10deg);
+          right: 40%;
+          bottom: 20%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
