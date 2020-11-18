@@ -6,4 +6,4 @@
 - Erstellung mit Angular
 - Viertes Projekt, in dem ich JavaScript genutzt habe
 - Ohne Framework erstellt
-- Spielbar unter [Hangaman-Game](https://mb-hangman.web.app/)
+- Spielbar unter [Hangman-Game](https://mb-hangman.web.app/)
