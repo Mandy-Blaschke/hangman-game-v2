@@ -13,8 +13,8 @@
     </div>
   </div>
 
-  <h2>Buchstaben zur Auswahl</h2>
-  <div class="alphabet">
+
+  <div class="alphabet" *ngIf="!gameFinished">
     <div *ngFor="let alphabetLetter of alphabet"
          (click)="guessLetter(alphabetLetter)"
          [class.disabled]="guessedLetters.includes(alphabetLetter) || faults === 12"
@@ -23,11 +23,11 @@
     </div>
   </div>
 
+  <div class="winner" *ngIf="gameFinished || faults === 12">
+    <button (click)="startGame()">Neues Spiel?</button>
+  </div>
+
 </div>
 
 
-<div class="winner" *ngIf="gameFinished">
-  <h2>Du hast gewonnen, das Wort war: {{currentWord.toUpperCase()}}</h2>
-  <button (click)="startGame()">Neues Spiel?</button>
-</div>
 

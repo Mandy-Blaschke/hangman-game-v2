@@ -69,5 +69,10 @@ export const WORDS: string[] = [
   'hypothese', 'projekt', 'managerin', 'wert', 'schwert', 'broetchen', 'geniessen', 'giessen', 'doktor', 'ausdruck', 'einteilung',
   'widmung', 'verschluss', 'schwein', 'affe', 'delfin', 'moment', 'annahme', 'verweigerung', 'dienstbote', 'forschung', 'mikroskop',
   'maus', 'tuete', 'einkauf', 'unterstuetzung', 'hilfe', 'unsicherheit', 'etage', 'stockwerk', 'lift', 'interesse', 'publikum',
-  'moderator', 'brief', 'taube', 'schlagen', 'dreck', 'eifersucht', 'wuerfel', 'verschwinden', 'rede'
+  'moderator', 'brief', 'taube', 'schlagen', 'dreck', 'eifersucht', 'wuerfel', 'verschwinden', 'rede', 'abkuerzung', 'recht', 'einigkeit',
+  'schliessen', 'geschlossen', 'schiessen', 'freunde', 'geschwister', 'firma', 'ruhe', 'fairness', 'clever', 'intelligenz',
+  'fachgebiet', 'reichtum', 'schloss', 'burg', 'thron', 'boot', 'erwachsen', 'selbstbewusst', 'kuehlschrank', 'schublade', 'wahrheit',
+  'pflicht', 'luegen', 'kirsche', 'birne', 'gluehbirne', 'brombeere', 'saturn', 'neptun', 'zeus', 'aphrodite', 'mars', 'venus',
+  'gespuer', 'getraenk', 'verrueckt', 'merkur', 'jupiter', 'uranus', 'pluto', 'mond', 'lichtschalter', 'bierdeckel', 'schifffahrt',
+  'spionage', 'kaefer', 'kummer'
 ];
