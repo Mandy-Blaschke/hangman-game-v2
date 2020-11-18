@@ -35,7 +35,7 @@
     background-image: repeating-linear-gradient(0deg, #642815 50%, #752b0f);
     box-shadow: 4px 1px 6px #211f1f;
     z-index: 3;
-    animation: ani-one ease-out 1s;
+    animation: ani-one linear 1s;
 
     @media (max-width: 520px) {
       left: 15%;
@@ -63,7 +63,7 @@
     background-image: repeating-linear-gradient(90deg, #642815 50%, #752b0f);
     box-shadow: 4px -2px 6px #211f1f;
     z-index: 3;
-    animation: ani-two ease-out 1s;
+    animation: ani-two linear 1s;
 
     @media (max-width: 370px) {
       left: 25%;
@@ -129,7 +129,7 @@
     background-image: repeating-linear-gradient(0deg, #642815 50%, #752b0f);
     box-shadow: 4px 1px 6px #211f1f;
     z-index: 2;
-    animation: ani-five ease-out 1s;
+    animation: ani-five linear 1s;
 
     @media (max-width: 520px) {
       left: 20%;
@@ -161,7 +161,7 @@
       border-radius: 12px;
       box-shadow: 1px 1px 3px #211f1f;
       z-index: 4;
-      animation: ani-six ease-out 1s;
+      animation: ani-six linear 1s;
 
       @media (max-width: 520px) {
         right: 41%;
@@ -186,7 +186,7 @@
       background-image: radial-gradient(#d2caba, #bc9d9d);
       box-shadow: 4px 1px 6px #211f1f;
       z-index: 4;
-      animation: ani-head ease 1s;
+      animation: ani-head linear 1s;
 
       @media (max-width: 420px) {
         right: 30%;
@@ -207,7 +207,7 @@
       box-shadow: 1px 1px 4px #211f1f;
       border-radius: 21px 21px 0 0;
       z-index: 3;
-      animation: ani-body ease-out 1s;
+      animation: ani-body linear 1s;
 
       @media (max-width: 580px) {
         right: 36%;
@@ -314,7 +314,7 @@
       box-shadow: 4px 1px 6px #211f1f;
       transform: rotate(-22deg);
       z-index: 1;
-      animation: ani-leg-right ease-out 1s;
+      animation: ani-leg-right linear 1s;
 
       @media (max-width: 850px) {
         right: 35.5%;
@@ -347,11 +347,7 @@
       box-shadow: 4px 1px 6px #211f1f;
       transform: rotate(16deg);
       z-index: 1;
-      animation: ani-leg-left ease-out 1s;
-
-      @keyframes ani-leg-right {
-        @include animations.ani-leg-left;
-      }
+      animation: ani-leg-left linear 1s;
 
       @media (max-width: 850px) {
         right: 42.5%;
@@ -374,6 +370,10 @@
 
       @media (max-width: 420px) {
         right: 39%;
+      }
+
+      @keyframes ani-leg-left {
+        @include animations.ani-leg-left;
       }
     }
 
