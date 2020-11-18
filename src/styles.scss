@@ -9,6 +9,27 @@ body {
   font-weight: bold;
   font-size: 22px;
   background-color: #fffcef;
+
+  @media (max-width: 600px){
+    transform: scale(0.9);
+    padding: 0;
+    margin: -90px 0;
+  }
+
+  @media (max-width: 500px){
+    transform: scale(0.8);
+    margin: -130px 0;
+  }
+
+  @media (max-width: 400px){
+    transform: scale(0.7);
+    margin: -190px 0;
+  }
+
+  @media (max-width: 320px){
+    transform: scale(0.5);
+    margin: -300px 0;
+  }
 }
 
 h1, h2, h3 {

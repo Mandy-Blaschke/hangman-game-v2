@@ -1,5 +1,5 @@
 @use 'animations';
-@use 'finished-game-box';
+@use 'src/app/finished-game-box';
 
 .hanging-man {
   position: relative;
@@ -37,6 +37,18 @@
     z-index: 3;
     animation: ani-one ease-out 1s;
 
+    @media (max-width: 520px) {
+      left: 15%;
+    }
+
+    @media (max-width: 420px) {
+      width: 260px;
+    }
+
+    @media (max-width: 370px) {
+      left: 10%;
+    }
+
     @keyframes ani-one {
       @include animations.ani-one;
     }
@@ -52,6 +64,10 @@
     box-shadow: 4px -2px 6px #211f1f;
     z-index: 3;
     animation: ani-two ease-out 1s;
+
+    @media (max-width: 370px) {
+      left: 25%;
+    }
 
     @keyframes ani-two {
       @include animations.ani-two;
@@ -70,6 +86,10 @@
     z-index: 1;
     animation: ani-three linear 1s;
 
+    @media (max-width: 370px) {
+      left: 21%;
+    }
+
     @keyframes ani-three {
       @include animations.ani-three;
     }
@@ -87,6 +107,14 @@
     z-index: 1;
     animation: ani-four linear 1s;
 
+    @media (max-width: 520px) {
+      left: 38%;
+    }
+
+    @media (max-width: 370px) {
+      left: 35%;
+    }
+
     @keyframes ani-four {
       @include animations.ani-four;
     }
@@ -102,6 +130,18 @@
     box-shadow: 4px 1px 6px #211f1f;
     z-index: 2;
     animation: ani-five ease-out 1s;
+
+    @media (max-width: 520px) {
+      left: 20%;
+    }
+
+    @media (max-width: 420px) {
+      width: 260px;
+    }
+
+    @media (max-width: 370px) {
+      left: 10%;
+    }
 
     @keyframes ani-five {
       @include animations.ani-five;
@@ -123,6 +163,14 @@
       z-index: 4;
       animation: ani-six ease-out 1s;
 
+      @media (max-width: 520px) {
+        right: 41%;
+      }
+
+      @media (max-width: 420px) {
+        right: 35%;
+      }
+
       @keyframes ani-six {
         @include animations.ani-six;
       }
@@ -140,6 +188,10 @@
       z-index: 4;
       animation: ani-head ease 1s;
 
+      @media (max-width: 420px) {
+        right: 30%;
+      }
+
       @keyframes ani-head {
         @include animations.ani-seven;
       }
@@ -156,6 +208,14 @@
       border-radius: 21px 21px 0 0;
       z-index: 3;
       animation: ani-body ease-out 1s;
+
+      @media (max-width: 580px) {
+        right: 36%;
+      }
+
+      @media (max-width: 420px) {
+        right: 27%;
+      }
 
       @keyframes ani-body {
         @include animations.ani-body;
@@ -175,6 +235,31 @@
       z-index: 1;
       animation: ani-arm-left linear 1s;
 
+      @media (max-width: 850px) {
+        right: 45%;
+      }
+
+      @media (max-width: 740px) {
+        bottom: 39%;
+      }
+
+      @media (max-width: 640px) {
+        bottom: 40%;
+      }
+
+      @media (max-width: 580px) {
+        right: 46%;
+        bottom: 39%;
+      }
+
+      @media (max-width:520px) {
+        right: 48%;
+      }
+
+      @media (max-width: 420px) {
+        right: 43%;
+      }
+
       @keyframes ani-arm-left {
         @include animations.ani-arm-left;
       }
@@ -191,8 +276,28 @@
       border-radius: 0 0 21px 21px;
       transform: rotate(-45deg);
       z-index: 1;
-
       animation: ani-arm-right linear 1s;
+
+      @media (max-width: 850px) {
+        bottom: 39%;
+      }
+
+      @media (max-width: 740px) {
+        right: 34%;
+      }
+
+      @media (max-width: 580px) {
+        right: 34%;
+      }
+
+      @media (max-width: 520px) {
+        right: 32%;
+        bottom: 38%;
+      }
+
+      @media (max-width: 420px) {
+        right: 22%;
+      }
 
       @keyframes ani-arm-right {
         @include animations.ani-arm-right;
@@ -210,6 +315,22 @@
       transform: rotate(-22deg);
       z-index: 1;
       animation: ani-leg-right ease-out 1s;
+
+      @media (max-width: 850px) {
+        right: 35.5%;
+      }
+
+      @media (max-width: 640px) {
+        right: 35%;
+      }
+
+      @media (max-width: 580px) {
+        right: 34%;
+      }
+
+      @media (max-width: 420px) {
+        right: 25%;
+      }
 
       @keyframes ani-leg-right {
         @include animations.ani-leg-right;
@@ -231,6 +352,29 @@
       @keyframes ani-leg-right {
         @include animations.ani-leg-left;
       }
+
+      @media (max-width: 850px) {
+        right: 42.5%;
+      }
+
+      @media (max-width: 740px) {
+        right: 43.5%;
+      }
+
+      @media (max-width: 640px) {
+      }
+
+      @media (max-width: 580px) {
+        right: 44%;
+      }
+
+      @media (max-width: 520px) {
+        right: 45%;
+      }
+
+      @media (max-width: 420px) {
+        right: 39%;
+      }
     }
 
 
@@ -239,8 +383,44 @@
 
     }
   }
+
+  @media (max-width: 850px) {
+    width: 700px;
+  }
+
+  @media (max-width: 740px) {
+    width: 600px;
+  }
+
+  @media (max-width: 640px) {
+    width: 550px;
+  }
+
+  @media (max-width: 580px) {
+    width: 500px;
+  }
+
+  @media (max-width: 520px) {
+    width: 450px;
+  }
+
+  @media (max-width: 480px) {
+    width: 400px;
+  }
+
+  @media (max-width: 420px) {
+    width: 350px;
+  }
+
+  @media (max-width: 360px) {
+    width: 320px;
+  }
+
+  @media (max-width: 340px) {
+    width: 300px;
+  }
+
+  @media (max-width: 319px) {
+    width: 280px;
+  }
 }
-
-
-
-

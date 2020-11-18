@@ -1,0 +1,60 @@
+@mixin finished-game-box {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  border-radius: 50%;
+  height: auto;
+  width: 500px;
+  z-index: 10;
+  transform: rotate(-10deg);
+  animation: glowing linear 3s infinite;
+
+  @media (max-width: 850px) {
+    left: 120px;
+  }
+
+  @media (max-width: 740px) {
+    left: 60px;
+  }
+
+  @media (max-width: 640px) {
+    width: 450px;
+    img {
+      width: 450px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    width: 350px;
+    img {
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 520px) {
+  }
+
+  @media (max-width: 480px) {
+    left: 30px;
+  }
+
+  @media (max-width: 420px) {
+    width: 300px;
+    img {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    width: 250px;
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 340px) {
+  }
+
+  @media (max-width: 319px) {
+  }
+}

@@ -19,11 +19,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.startGame();
-    console.log(this.currentWord);
   }
 
   startGame(): void {
+    this.currentWord = '';
     this.resetGame();
+    this.currentWord = this.words[Math.floor(Math.random() * this.words.length)].toLowerCase();
+    this.getLettersFromCurrentWord();
+    console.log(this.currentWord);
   }
 
   getLettersFromCurrentWord(): void {
@@ -57,12 +60,11 @@ export class AppComponent implements OnInit {
   }
 
   resetGame(): void {
-    this.currentWord = this.words[Math.floor(Math.random() * this.words.length)].toLowerCase();
-    this.getLettersFromCurrentWord();
     this.faults = 0;
     this.guessedLetters = [];
     this.gameFinished = false;
     this.lettersOfCurrentWord.forEach((l) => l.isVisible = false);
+    this.lettersOfCurrentWord = [];
   }
 
 }
