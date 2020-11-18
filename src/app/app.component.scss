@@ -1,4 +1,9 @@
+@use '/hanging-man/animations';
+
 .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .word, .alphabet, .tries {
     display: flex;
@@ -6,18 +11,49 @@
 
     .letter-box {
       width: 30px;
-      height: 30px;
-      border: 1px solid black;
-      margin: 5px;
+      height: 40px;
+      border: 3px solid black;
+      margin: 3px;
       display: flex;
       justify-content: center;
       align-items: center;
+      -webkit-user-select: none;
       user-select: none;
+      font-weight: bold;
     }
   }
 
+  .word {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #89a8ab;
+
+    .letter-box {
+      background-color: ghostwhite;
+
+      &.visible {
+        animation: reveal ease 800ms;
+      }
+
+      @keyframes reveal {
+        @include animations.letter-reveal;
+      }
+
+    }
+  }
+
+  .alphabet {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
   .disabled {
-    background-color: yellow;
     pointer-events: none;
   }
 }
+
+
+

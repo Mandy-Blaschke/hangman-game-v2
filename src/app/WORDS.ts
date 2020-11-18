@@ -64,5 +64,10 @@ export const WORDS: string[] = [
   'facebook', 'bruder', 'gaensehaut', 'schwester', 'sideboard', 'kommode', 'schulzeit', 'schreibblock', 'notizbuch', 'intervall',
   'reifen', 'fahne', 'fahnenstange', 'seil', 'profil', 'wagen', 'entscheidung', 'auswahl', 'abend', 'sonnenuntergang', 'sternenhimmel',
   'himmel', 'raum', 'kissen', 'kopfkissen', 'muskeln', 'planetarium', 'direktorin', 'stelle', 'astronaut', 'weltall', 'unendlich',
-  'einfach', 'schwer', 'suche', 'unsichtbar'
+  'einfach', 'schwer', 'suche', 'unsichtbar', 'pfeil', 'buecherregal', 'bibliothek', 'krankenhaus', 'rathaus', 'verstand', 'karaoke',
+  'stolz', 'vorurteil', 'rampe', 'rampenlicht', 'gewitter', 'regen', 'praesident', 'kanzlerin', 'anwalt', 'symmetrie', 'paradigma',
+  'hypothese', 'projekt', 'managerin', 'wert', 'schwert', 'broetchen', 'geniessen', 'giessen', 'doktor', 'ausdruck', 'einteilung',
+  'widmung', 'verschluss', 'schwein', 'affe', 'delfin', 'moment', 'annahme', 'verweigerung', 'dienstbote', 'forschung', 'mikroskop',
+  'maus', 'tuete', 'einkauf', 'unterstuetzung', 'hilfe', 'unsicherheit', 'etage', 'stockwerk', 'lift', 'interesse', 'publikum',
+  'moderator', 'brief', 'taube', 'schlagen', 'dreck', 'eifersucht', 'wuerfel', 'verschwinden', 'rede'
 ];

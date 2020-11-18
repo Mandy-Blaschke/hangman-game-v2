@@ -9,6 +9,7 @@ export class HangingManComponent implements OnInit {
 
 
   @Input() faults: number;
+  @Input() gameFinished: boolean;
 
   constructor() {
   }

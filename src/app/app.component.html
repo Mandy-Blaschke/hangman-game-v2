@@ -2,35 +2,24 @@
 
 <div class="game">
 
-  <app-hanging-man [faults]="faults"></app-hanging-man>
+  <app-hanging-man [faults]="faults" [gameFinished]="gameFinished"></app-hanging-man>
 
   <h2>Gesuchtes Wort</h2>
   <div class="word">
     <div *ngFor="let letter of lettersOfCurrentWord">
-      <div class="letter-box">
+      <div class="letter-box" [class.visible]="letter.isVisible">
         <p *ngIf="letter.isVisible === true" class="letter">{{letter.char.toUpperCase()}}</p>
       </div>
     </div>
   </div>
 
-  <hr>
-
   <h2>Buchstaben zur Auswahl</h2>
   <div class="alphabet">
     <div *ngFor="let alphabetLetter of alphabet"
          (click)="guessLetter(alphabetLetter)"
-         [class.disabled]="guessedLetters.includes(alphabetLetter) || gameFinished"
+         [class.disabled]="guessedLetters.includes(alphabetLetter) || faults === 12"
     >
-      <div class="letter-box">{{alphabetLetter.toUpperCase()}}</div>
-    </div>
-  </div>
-
-  <hr>
-
-  <h2>Deine Versuche</h2>
-  <div class="tries">
-    <div *ngFor="let guessedLetter of guessedLetters">
-      <div class="letter-box">{{guessedLetter.toUpperCase()}}</div>
+      <div class="letter-box" *ngIf="!guessedLetters.includes(alphabetLetter)">{{alphabetLetter.toUpperCase()}}</div>
     </div>
   </div>
 
