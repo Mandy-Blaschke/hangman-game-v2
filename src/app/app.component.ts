@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.startGame();
+    console.log(this.currentWord);
   }
 
   startGame(): void {
@@ -28,7 +29,7 @@ export class AppComponent implements OnInit {
     const chars = this.currentWord.split('');
     chars.forEach((l) => this.lettersOfCurrentWord.push(
       {
-        char: l.toUpperCase(),
+        char: l,
         isVisible: false
       }
     ));
@@ -55,7 +56,7 @@ export class AppComponent implements OnInit {
   }
 
   resetGame(): void {
-    this.currentWord = this.words[Math.floor(Math.random() * this.words.length)];
+    this.currentWord = this.words[Math.floor(Math.random() * this.words.length)].toLowerCase();
     this.getLettersFromCurrentWord();
     this.faults = 0;
     this.guessedLetters = [];
@@ -75,7 +76,7 @@ export const WORDS: string[] = [
   'Blumentopf', 'Lautsprecher', 'Pflanze', 'Xylophon', 'Telefon', 'PlayStation', 'Ladekabel',
   'Trinkflasche', 'Lampe', 'Fledermaus', 'Tisch', 'Briefumschlag', 'Jalousien', 'Gardine', 'Palme',
   'Keyboard', 'Computer', 'Wandbild', 'Tapete', 'Bettbezug', 'Ordner', 'Computermaus', 'Rasen',
-  'Wildblumen', 'Kopfhörer', 'Lederjacke', 'Untersetzer', 'Spezialisierung', 'Bauchnabel', 'Smartphone',
+  'Wildblumen', 'Kopfhoerer', 'Lederjacke', 'Untersetzer', 'Spezialisierung', 'Bauchnabel', 'Smartphone',
   'Pinguin', 'Hund', 'Mund', 'Magnet', 'Krankschreibung', 'Arzt', 'Joghurt', 'Kabel', 'Fenster', 'Rauch',
   'Feuer', 'Oma', 'Luftfeuchtigkeit', 'Blatt', 'Kekse', 'Arme', 'Nuss', 'Weihnachten', 'Karte', 'Eltern',
   'Bildschirm', 'Gabel', 'Messer', 'Besteck', 'Tafel', 'Schuhe', 'Hosen', 'Haarfarbe', 'Krawatte', 'Bettbezug',
@@ -127,5 +128,10 @@ export const WORDS: string[] = [
   'hundert', 'kueche', 'aufregung', 'euphorie', 'fragen', 'wissen', 'ernaehrung', 'vergangenheit', 'politik', 'superman',
   'batman', 'afrika', 'feldzug', 'diesel', 'mode', 'geld', 'modenschau', 'experiment', 'gold', 'loch', 'dollar', 'versprechen',
   'gehirn', 'widerspruch', 'mechanik', 'millionen', 'cents', 'euro', 'europa', 'asien', 'australien', 'steigerung', 'jahre',
-  'jahreszeit', 'fruehling', 'summe',
+  'jahreszeit', 'fruehling', 'summe', 'verfuegung', 'brille', 'schaufenster', 'pandemie', 'epidemie', 'irren', 'schluessel',
+  'schuessel', 'schluesselbein', 'knochen', 'brechen', 'leute', 'taille', 'verstecken', 'hoehle', 'sorgfalt', 'naschen',
+  'spass', 'perfekt', 'pronomen', 'personen', 'begruessung', 'verabschiedung', 'sicherheit', 'sponsoren', 'serioes', 'reiz',
+  'design', 'kostenlos', 'radio', 'laden', 'mikrowelle', 'backofen', 'fehler', 'tattoo', 'limonade', 'spiegel', 'lager',
+  'urkunde', 'zeugnis', 'zertifikat', 'ring', 'zustand', 'opfer', 'tapfer', 'glauben', 'aufzug', 'musik', 'hassen', 'lieben',
+  'decke', 'beton', 'reihenhaus', 'photosynthese', 'wurm', 'poker', 'witze',
 ];

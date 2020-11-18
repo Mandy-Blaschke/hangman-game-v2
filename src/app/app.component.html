@@ -10,7 +10,7 @@
   <div class="word">
     <div *ngFor="let letter of lettersOfCurrentWord">
       <div class="letter-box">
-        <p *ngIf="letter.isVisible === true" class="letter">{{letter.char}}</p>
+        <p *ngIf="letter.isVisible === true" class="letter">{{letter.char.toUpperCase()}}</p>
       </div>
     </div>
   </div>
@@ -19,10 +19,11 @@
 
   <h2>Buchstaben zur Auswahl</h2>
   <div class="alphabet">
-    <div *ngFor="let alphabetLetter of alphabet" (click)="guessLetter(alphabetLetter)"
+    <div *ngFor="let alphabetLetter of alphabet"
+         (click)="guessLetter(alphabetLetter)"
          [class.disabled]="guessedLetters.includes(alphabetLetter)"
     >
-      <div class="letter-box">{{alphabetLetter}}</div>
+      <div class="letter-box">{{alphabetLetter.toUpperCase()}}</div>
     </div>
   </div>
 
@@ -31,7 +32,7 @@
   <h2>Deine Versuche</h2>
   <div class="tries">
     <div *ngFor="let guessedLetter of guessedLetters">
-      <div class="letter-box">{{guessedLetter}}</div>
+      <div class="letter-box">{{guessedLetter.toUpperCase()}}</div>
     </div>
   </div>
 
