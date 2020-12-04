@@ -4,6 +4,4 @@
 - Entstanden im Rahmen meines Selbststudiums
 - neue Version meines Hangman-Spiels
 - Erstellung mit Angular
-- Viertes Projekt, in dem ich JavaScript genutzt habe
-- Ohne Framework erstellt
-- Spielbar unter [Hangman-Game](https://mb-hangman.web.app/)
+- Spielbar unter [Hangman-Game](https://mandy-blaschke.de/assets/projects/hangman-game/)
